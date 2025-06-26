@@ -1,0 +1,104 @@
+/* Login.css */
+
+.login-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.login-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.7);
+}
+
+/* Glass card */
+.login-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  padding: 40px 30px;
+  width: 360px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Title */
+.login-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+/* Role toggle buttons */
+.role-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.role-btn {
+  padding: 10px 24px;
+  border-radius: 8px;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.role-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.role-btn.active {
+  background-color: #fb923c;
+  border: none;
+  color: #fff;
+}
+
+/* Input fields */
+.login-input {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+/* Login button */
+.login-btn {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: #fb923c;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
