@@ -15,7 +15,7 @@ export default function Home() {
         <h1 className="home-title">Welcome to the Platform</h1>
         <div className="home-buttons">
           <button className="btn-login" onClick={() => navigate('/login')}>Login</button>
-          <button className="btn-signup" onClick={() => navigate('/signup')}>Sign Up</button>
+          <button className="btn-signup" onClick={() => navigate('/register')}>Register</button>
         </div>
       </div>
     </div>

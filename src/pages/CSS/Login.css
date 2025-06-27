@@ -1,5 +1,4 @@
-/* Login.css */
-
+/* Container with video background */
 .login-container {
   position: relative;
   width: 100%;
@@ -9,8 +8,11 @@
   justify-content: center;
   align-items: center;
   font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
+/* Background Video */
 .login-video {
   position: absolute;
   top: 0;
@@ -19,20 +21,22 @@
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  filter: brightness(0.7);
+  filter: brightness(0.6);
 }
 
-/* Glass card */
+/* Glassmorphic card */
 .login-card {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(15px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   border-radius: 20px;
   padding: 40px 30px;
-  width: 360px;
+  width: 100%;
+  max-width: 400px;
   text-align: center;
   color: #ffffff;
+  box-sizing: border-box;
 }
 
 /* Title */
@@ -40,18 +44,20 @@
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 25px;
+  color: #fff;
 }
 
-/* Role toggle buttons */
+/* Role switch buttons */
 .role-buttons {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .role-btn {
-  padding: 10px 24px;
+  padding: 10px 20px;
   border-radius: 8px;
   border: 1px solid white;
   background-color: transparent;
@@ -71,7 +77,7 @@
   color: #fff;
 }
 
-/* Input fields */
+/* Input Fields */
 .login-input {
   width: 100%;
   padding: 12px 16px;
@@ -82,9 +88,14 @@
   color: white;
   outline: none;
   font-size: 0.95rem;
+  box-sizing: border-box;
 }
 
-/* Login button */
+.login-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Submit Button */
 .login-btn {
   width: 100%;
   padding: 12px 16px;
@@ -101,4 +112,59 @@
 .login-btn:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .login-card {
+    padding: 30px 20px;
+    width: 90%;
+  }
+
+  .login-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .login-container {
+    padding: 10px;
+  }
+
+  .login-card {
+    padding: 25px 15px;
+  }
+
+  .role-buttons {
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .role-btn {
+    width: 100%;
+  }
+
+  .login-input {
+    font-size: 0.9rem;
+  }
+
+  .login-btn {
+    font-size: 0.95rem;
+  }
+}
+.login-register-text {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+.register-link {
+  color: #fb923c;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.register-link:hover {
+  color: #ffae5f;
 }
